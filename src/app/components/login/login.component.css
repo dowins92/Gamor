@@ -1,19 +1,34 @@
+
+#login{
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  border-radius: 20px;
+  background-image: url("../../../assets/img/background_login.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .form {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 0.4em;
-  background-color: #171717;
+  background-color: transparent;
   border-radius: 25px;
   transition: .4s ease-in-out;
 }
 
-.form:hover {
+/*.form:hover {
   transform: scale(1.05);
   border: 1px solid black;
-}
+}*/
 
 #heading {
   text-align: center;
@@ -104,6 +119,14 @@
 }
 
 .button3:hover {
-  background-color: red;
+  background-color: #fe8743;
   color: white;
+}
+
+@media screen and (max-width: 720px){
+  #login{
+    height: 100vh;
+    border-radius: 0;
+  }
+
 }

@@ -134,9 +134,11 @@
 }
 
 
+
+
 @media screen and (max-width: 720px) {
   .navbar{
-    background: #101724;
+    background: var(--backmenubar);
     width: 100%;
     height: var(--menuheight);
     padding: 0;
@@ -145,6 +147,14 @@
     justify-content: start;
     transition-property: opacity, left, top, height;
     transition-duration: 3s, 1s;
+  }
+
+  .navbar a{
+    color: black;
+  }
+
+  .navbar a:hover{
+    color: white;
   }
 
   .navbar .navbar-nav{

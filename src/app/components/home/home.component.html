@@ -11,10 +11,10 @@
       </div>
 
      <div class="buttonarea">
-         <button class="btn btn-section">
+         <button class="btn btn-section" *ngIf="!autenticado">
            Create account
          </button>
-         <button class="btn btn-signin">
+         <button class="btn btn-signin" routerLink="/login" *ngIf="!autenticado">
            Sign in
          </button>
       </div>
@@ -43,21 +43,73 @@
       <br>
       <h5>02. Search game</h5>
       <div class="searcharea">
-        <input type="text" placeholder="search">
+        <div class="searcharea-container">
+          <input type="text" placeholder="search" [(ngModel)]="juegosearch" value="{{juegosearch}}">
+          <div class="searcharea-button">
+            <a (click)="Buscar()"><img src="../../../assets/img/filter_dark.png"></a>
+          </div>
+        </div>
         <br>
-          <table>
-            <tr *ngFor="let teams of teams")>
-              <td>{{teams.id}}</td>
-              <td>{{teams.name}}</td>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
+        <table>
+          <tbody>
+          <tr *ngFor="let item of teams">
+            <td><div class="id-user-table"> {{item.id}}</div></td>
+            <td>{{item.team_name}}</td>
+            <td><img src="../../../assets/img/users/{{item.mini}}.png"></td>
+            <td><button class="btn-plus" (click)="setActiveUser(item.id)">+</button></td>
+          </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <section id="stream">
-    <h2>Parte de abajo</h2> <small>aqui</small>
+
+    <div class="container-seccion2">
+      <h5> Streamings</h5>
+      <div class="area-streams-seccion2">
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+      </div>
+      <div class="area-streams-seccion2">
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+      </div>
+      <div class="area-streams-seccion2">
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+        <div class="streams-seccion-2">
+
+        </div>
+      </div>
+    </div>
   </section>
 </main>

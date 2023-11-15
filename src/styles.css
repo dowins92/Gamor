@@ -14,6 +14,8 @@
   --menuheight: 50px;
   --displayimage: flex;
   --navbar-nav-display: none;
+  --backmenubar: #7e34ed;
+  --backidtable: #000000
 }
 
 *,

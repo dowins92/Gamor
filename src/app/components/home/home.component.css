@@ -14,7 +14,7 @@ section {
 }
 
 #stream{
-  background-color: #7e9734;
+  background-color: var(--gamercontentcolor);
 }
 
  .gamerdiv{
@@ -59,8 +59,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
-  padding-top: 15px;
+  padding-top: 5px;
   background-color: var(--gamermiddleseccion);
   background-image: var(--background-image-middle);
   background-repeat: no-repeat;
@@ -117,6 +116,42 @@ section {
   background-color: var(--gamersectionbuttoncolor);
 }
 
+.btn-plus{
+  color: var(--textarea);
+  background-color: var(--gamersectionbuttoncolor);
+  border-radius: 5px;
+  width: 1.5rem;
+  border-color: transparent;
+}
+
+.id-user-table{
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  background-color: var(--backidtable);
+  border-radius: 25px;
+}
+
+.gameruserdiv table{
+  width: 100%;
+}
+
+.gameruserdiv table img{
+  width: 70%;
+}
+
+.gameruserdiv table td{
+  width: 25%;
+  padding: 0.5rem 0 0 1rem;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+.btn-plus:hover{
+  background-color: var(--gamermiddleseccion);
+}
+
 .searcharea{
    padding-top: 20px;
    color: var(--textcolor);
@@ -131,17 +166,41 @@ section {
  }
 
  /*Search input*/
+
+.searcharea-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 90%;
+}
+
+.searcharea-button{
+  display: flex;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.searcharea-button img{
+  width: 30px;
+}
 .searcharea input{
   background: transparent;
-  color: #adb5bd;
+  color: var(--textcolor);
   font-size: 100%;
   font-weight: bold;
-  width: 95%;
+  width: 80%;
   height: 3rem;
   border-radius: 20px 20px 0 0;
   border-color: transparent;
 }
+
+.searcharea input:hover{
+  border-color: orange;
+}
 /*Search input end*/
+
 
 .middle strong{
   color: var(--middletextcolor);
@@ -200,6 +259,35 @@ h5, .h5 {
   color: #fe8743;
 }
 
+.container-seccion2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container-seccion2 h5{
+  margin-top: 1rem;
+}
+
+.area-streams-seccion2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 33.3%;
+}
+
+.streams-seccion-2{
+  margin: 0.5rem;
+  width: 25%;
+  background-color: var(--gamermiddleseccion);
+  height: 80%;
+  border-radius: 25px;
+
+}
+
 @media screen and (max-width: 720px){
 
 
@@ -210,13 +298,18 @@ h5, .h5 {
     border-radius: 0;
   }
 
-  .gamerdiv, .middle, .gameruserdiv{
+  .gamerdiv, .middle, .gameruserdiv, .container-seccion2{
     width: 100%;
     height: 100vh;
   }
 
   .buttonarea{
     padding-left: 3rem;
+  }
+
+  .streams-seccion-2{
+    width: 80%;
+    height: 40%;
   }
 }
 

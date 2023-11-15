@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-banner',
@@ -9,6 +10,13 @@ export class BannerComponent {
   theme = 'dark';
   logo = 'logo-dark';
   visible: boolean = false;
+  autenticado: boolean = false;
+
+  constructor(private user:UserService){}
+
+  ngOnInit(){
+    this.ComprobarAutenticado()
+  }
 
   switchTheme(){
     //cambio a dark
@@ -23,6 +31,8 @@ export class BannerComponent {
       document.documentElement.style.setProperty('--middletextcolor', '#bf5000');
       document.documentElement.style.setProperty('--background-image-gamezone', 'url(./assets/img/backsect_dark.png)');
       document.documentElement.style.setProperty('--gamerbackcolor', '#181f27');
+      document.documentElement.style.setProperty('--backmenubar', '#7e34ed');
+      document.documentElement.style.setProperty('--backidtable', '#000000');
 
 
       this.theme = 'dark';
@@ -41,6 +51,8 @@ export class BannerComponent {
         document.documentElement.style.setProperty('--middletextcolor', '#410699');
         document.documentElement.style.setProperty('--background-image-gamezone', 'url(./assets/img/backsect_light.png)');
         document.documentElement.style.setProperty('--gamerbackcolor', '#f9fafc');
+        document.documentElement.style.setProperty('--backmenubar', '#fe8743');
+        document.documentElement.style.setProperty('--backidtable', '#c9c9c9');
 
         this.theme = 'light';
         this.logo = 'logo-light'
@@ -63,6 +75,10 @@ export class BannerComponent {
         this.visible = false;
       }
     }
+  }
+
+  ComprobarAutenticado(){
+    this.autenticado = this.user.getAutentication();
   }
 
 }
