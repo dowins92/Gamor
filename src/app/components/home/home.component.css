@@ -1,12 +1,12 @@
 section {
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
 }
 
 #gamercontent{
@@ -17,31 +17,144 @@ section {
   background-color: #7e9734;
 }
 
-section div {
-  width: 33%;
-  height: 100%;
+ .gamerdiv{
+   width: 33%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   padding: 3% 3% 3% 6%;
+   background-image: var(--background-image-gamezone);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
 }
 
- section .gamerdiv{
-  background-color: #ff214f;
-  border-radius: 30px 0 0 30px;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
+ .gamerdivtext{
+   display: flex;
+   flex-direction: column;
+ }
 
 .gameruserdiv{
-  background-color: #adb5bd;
-  border-radius: 0 30px 30px 0;
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameruserdiv h4{
+  color: #6c757d;
+}
+
+.gameruserdiv h5{
+  color: var(--textcolor);
 }
 
 .middle{
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding-top: 15px;
+  background-color: var(--gamermiddleseccion);
+  background-image: var(--background-image-middle);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.middle h4{
+  padding-top: 3rem;
+}
+
+
+ .time{
+   display: grid;
+   place-items: center;
+   background-color: #ffffff;
+   border-radius: 24px;
+   width: 8rem;
+   height: 3rem;
+
+}
+
+ .time p{
+   font-weight: bold;
+   font-size: 1.5rem;
+   color: var(--middletextcolor);
+   margin: 0;
+ }
+
+
+.buttonsback{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--gamerbackcolor);
+  border-radius: 25px;
+  width: 80%;
+  height: 4rem;
+}
+
+.btn-choose {
+  color: var(--textarea);
+  background-color: transparent;
+  border-radius: 25px;
+  width: 32%;
+  height: 80%;
+}
+
+.btn-choose:hover{
   background-color: var(--gamermiddleseccion);
 }
 
-.buttonarea{
-  padding-top: 15px;
+.btn-choose.active {
+  background-color: var(--gamersectionbuttoncolor);
 }
+
+.searcharea{
+   padding-top: 20px;
+   color: var(--textcolor);
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: start;
+   background-color: var(--gamerbackcolor);
+   border-radius: 40px;
+   width: 80%;
+   height: 60%;
+ }
+
+ /*Search input*/
+.searcharea input{
+  background: transparent;
+  color: #adb5bd;
+  font-size: 100%;
+  font-weight: bold;
+  width: 95%;
+  height: 3rem;
+  border-radius: 20px 20px 0 0;
+  border-color: transparent;
+}
+/*Search input end*/
+
+.middle strong{
+  color: var(--middletextcolor);
+}
+
+.buttonarea{
+  display: flex;
+  padding-top: 3rem;
+  width: 100%;
+  flex-direction: row;
+  justify-items: center;
+}
+
 
 h1, .h1 {
   font-size: 3rem;
@@ -64,25 +177,46 @@ h5, .h5 {
 }
 
 .btn-section {
-  color: #fff;
+  color: var(--textarea);
   background-color: var(--gamersectionbuttoncolor);
-  border-radius: 20px;
+  border-radius: 40px;
+  width: 10rem;
+  height: 4rem;
 }
 
 .btn-section:hover {
   color: #fff;
   background-color: #fe8743;
-  border-color: #ced4da;
+}
+
+
+.btn-signin {
+  color: var(--textarea);
+  background-color: transparent;
+  border-radius: 40px;
+}
+
+.btn-signin:hover {
+  color: #fe8743;
 }
 
 @media screen and (max-width: 720px){
-section {
+
+
+  section{
     flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    border-radius: 0;
   }
 
-  section div{
+  .gamerdiv, .middle, .gameruserdiv{
     width: 100%;
-    height: 100%;
+    height: 100vh;
+  }
+
+  .buttonarea{
+    padding-left: 3rem;
   }
 }
 

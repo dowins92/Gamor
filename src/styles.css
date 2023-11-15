@@ -1,9 +1,19 @@
 :root {
-  --background: #141c29;
+  --background: #181f27;
   --textcolor: #f8f9fa;
   --gamercontentcolor: #1f2630;
   --gamermiddleseccion: #fe8743;
+  --gamerbackcolor: #181f27;
   --gamersectionbuttoncolor: #444c53;
+  --textarea: #e5e1f0;
+  --textgamerh2: #7e34ed;
+  --middletextcolor: #bf5000;
+  --background-image-middle: url(./assets/img/users/user3.png);
+  --background-image-gamezone: url(./assets/img/backsect_dark.png);
+  /*var menu responsive*/
+  --menuheight: 50px;
+  --displayimage: flex;
+  --navbar-nav-display: none;
 }
 
 *,
@@ -11,7 +21,7 @@
 *::before {
   margin: 0px;
   padding: 0px;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -24,7 +34,6 @@ body {
   text-align: left;
   background: var(--background);
   box-sizing: border-box;
-  min-width: 992px !important;
 
 }
 
@@ -55,10 +64,8 @@ p {
   margin-bottom: 1rem;
 }
 
-address {
-  margin-bottom: 1rem;
-  font-style: normal;
-  line-height: inherit;
+ul {
+  list-style-type: none;
 }
 
 ol,
@@ -68,27 +75,6 @@ dl {
   margin-bottom: 1rem;
 }
 
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-  margin-bottom: 0;
-}
-
-dt {
-  font-weight: 700;
-}
-
-dd {
-  margin-bottom: .5rem;
-  margin-left: 0;
-}
-
-blockquote {
-  margin: 0 0 1rem;
-}
-
-b,
 strong {
   font-weight: bolder;
 }
@@ -122,7 +108,6 @@ a {
 a:hover {
   color: #fe8743;
   text-decoration: none;
-
 }
 
 pre,
@@ -169,10 +154,7 @@ th {
   text-align: inherit;
 }
 
-label {
-  display: inline-block;
-  margin-bottom: 0.5rem;
-}
+
 
 button {
   border-radius: 0;
@@ -214,9 +196,6 @@ mark,
   color: #f8f9fa;
   text-align: center;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -230,6 +209,12 @@ mark,
 .btn:hover {
   color: #f8f9fa;
   text-decoration: none;
+}
+
+@media screen and (max-width: 720px){
+  body{
+    margin: 0;
+  }
 }
 
 

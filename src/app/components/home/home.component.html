@@ -1,28 +1,59 @@
 <main>
   <section id="gamercontent">
     <div class="gamerdiv">
-      <h1>start</h1>
-      <h1>streaming</h1>
-      <h1>games</h1>
-      <h1>diferently</h1>
-      <br>
-      <small>gamor now has <strong>stream party</strong> platform</small>
-      <div class="buttonarea">
-        <button class="btn btn-section">
-          Create account
-        </button>
+      <div class="gamerdivtext">
+        <h1>start</h1>
+        <h1 style="color: var(--textgamerh2)">streaming</h1>
+        <h1>games</h1>
+        <h1>diferently</h1>
+        <br>
+        <small>gamor now has <strong>stream party</strong> platform</small>
+      </div>
+
+     <div class="buttonarea">
+         <button class="btn btn-section">
+           Create account
+         </button>
+         <button class="btn btn-signin">
+           Sign in
+         </button>
       </div>
     </div>
 
     <div class="middle">
-      <small>
-        parte2
-      </small>
+      <h4>Fortnine New Season</h4>
+      <strong>Join Live Stream</strong>
+      <br>
+      <div class="time"><p>{{this.date.getHours()+':'+this.date.getMinutes()}}</p></div>
     </div>
+
     <div class="gameruserdiv">
-        <small>
-          parte 3
-        </small>
+      <h5>01. Choose Platform</h5>
+      <div class="buttonsback">
+        <button class="btn btn-choose active">
+          Party
+        </button>
+        <button class="btn btn-choose">
+          Match
+        </button>
+        <button class="btn btn-choose">
+          Stream
+        </button>
+      </div>
+      <br>
+      <h5>02. Search game</h5>
+      <div class="searcharea">
+        <input type="text" placeholder="search">
+        <br>
+          <table>
+            <tr *ngFor="let teams of teams")>
+              <td>{{teams.id}}</td>
+              <td>{{teams.name}}</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+      </div>
     </div>
   </section>
 
